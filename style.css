@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 1% 1% 1% 1%;
+    font-family: "Poppins", 'Sans serif';
+    background-color: rgb(6, 0, 0);
+    width: 98%;
+    height: 95vh;
+    display: flex;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.menu_bar{
+    width: 25%;
+    min-width: 280px;
+    height: 93%;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+}
+
+.nav, .library{
+    margin: 5px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-color: rgb(14, 13, 13);
+    color: rgba(210, 207, 207, 0.943);
+}
+.library{
+    min-height: 70%;
+}
+
+ul{
+    list-style: none;
+}
+.nav_item, h4 {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 10px;
+    padding: 5px;
+}
+.library-item{
+    margin-left: 15px;
+    padding: 5px;
+    font-size: 14px;
+}
+.playlist-song{
+    background-color: rgba(58, 59, 61, 0.397);
+    width: 96%;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+#song-container{
+    margin-top: 15px;
+    width: 100%;
+    height: 150px;
+    overflow-y: scroll;
+    box-shadow: inset 0px 8px 6px -6px black;
+}
+.song-name{
+    margin-top: 20px;
+}
+.song-item{
+    margin-left: 15px;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+}
+.poster{
+    height: 1cm;
+    width: 1cm;
+}
+.song-name{
+    display: flex;
+    justify-content: flex-start;
+    gap: 3px;
+    align-items: center;
+}
+h3{
+    font-size: 14px;
+    font-weight: bold;
+}
+.sub{
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+}
+.fa-circle-play, .poster, .sub{
+    margin-left: 5px;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-button{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    height: 10px;
+    background-color: rgba(128, 128, 128, 0.609);
+    border-radius: 4px;
+}
+.library-item:hover{
+    border: 1px solid rgb(8, 99, 144);
+    cursor: pointer;
+}
+.nav_item:hover{
+    cursor: pointer;
+    color: rgb(48, 189, 237);
+}
+.song-item:hover{
+    background-color: rgba(18, 149, 237, 0.203);
+}
+
+/*__________________________________Navigation Menu ends_________________________________________ */
+
+
+/* _________________________________Control Bar Starts_________________________________________ */
+
+@keyframes waves {
+    0%{height: 10px;}
+    50%{height: 15px;}
+    100%{height: 10px;}
+}
+.control_bar{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#animation-waves{
+    height:60%;
+    width: max-content;
+    display: flex;
+    gap: 3px;
+    align-items: flex-end;
+}
+.waveline{
+    height: 100%;
+    width: 4px;
+    background-color: rgb(52, 174, 214);
+}
+.waveline:first-child{
+    animation: waves 1.5s linear .1s infinite alternate-reverse ;
+}
+.waveline:nth-child(2){
+    animation: waves 2s linear .5s infinite alternate-reverse ;
+}
+.waveline:last-child{
+    animation: waves 1s linear .8s infinite alternate-reverse ;
+}
+#song-img{
+    height: 95%;
+}
+#song-line{
+    height: 5px;
+    width: 45%;
+    border: 0.05px solid rgba(16, 15, 15, 0.38);
+    background-color: rgba(90, 88, 88, 0.38);
+    cursor: pointer;
+}
+#song-progress{
+    width: 0;
+    max-width: 100%;
+    height: 100%;
+    background-color: rgb(3, 151, 184);
+}
+#volume-line{
+    width: 15%;
+    height: 4px;
+    border: 0.05px solid rgba(25, 24, 24, 0.38);
+    background-color: rgba(90, 88, 88, 0.38);
+    cursor: pointer;
+}
+#volumeControl{
+    width: 0;
+    height: 100%;
+    background-color: rgb(3, 151, 184);
+}
+/* ___________________________________________________________________________________________________________ */
+/* _________________________________Song Box________________________________________________ */
+
+.song_box{
+    width: 74%;
+    height: 93%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-x: hidden;
+}
+.song-box-head{
+    background-image: url(./RuthB.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0;
+    box-shadow: inset 0px -18px 10px -5px rgba(25, 25, 25, 0.701);
+}
+.song-box-nav-list{
+    display: flex;
+    font-size: x-small;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items: center;
+    padding: 3%;
+    /* margin-top: 3%; */
+}
+.song-box-nav-item{
+    padding: 10px;
+}
+.song-box-nav-item:hover{
+    border-bottom: 1.5px solid rgb(4, 124, 92);
+    cursor: pointer;
+}
+.song-box-nav-user{
+    height: 1.8rem;
+    width: 1.8rem;
+    border: 0.5px solid black;
+    border-radius: 16px;
+    margin-left: 70%;
+}
+.song-box-details{
+    padding-left: 3.5%;
+    padding-bottom: 3.5%;
+}
+.song-box-details button{
+    margin-top: 2%;
+    width: 100px;
+    background-color:transparent;
+    padding: 10px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 20px;
+}
+.song-box-details button:hover{
+ color: white;
+ background-color: rgb(5, 112, 131);
+ cursor: pointer;
+ border: none;
+}
+#left , #right{
+    cursor: pointer;
+}
+#carousel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 12px;
+    height: fit-content;
+    margin-top: 2%;
+}
+.song-box-body h4, h5{
+    color: white;
+    margin-left: 3.5%;
+}
+.song-box-body h4{
+    font-weight: bold;
+    padding-top: 3.5%;
+    font-size: 20px;
+}
+.song-box-body h5{
+    display: flex;
+}
+.posters img{
+    border: 0.5px solid rgba(165, 162, 162, 0.298);
+    cursor: pointer;
+}
+/* ________________________________________________________________________________________________ */
+
